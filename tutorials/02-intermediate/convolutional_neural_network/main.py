@@ -36,6 +36,7 @@ test_loader = torch.utils.data.DataLoader(dataset=test_dataset,
 class ConvNet(nn.Module):
     def __init__(self, num_classes=10):
         super(ConvNet, self).__init__()
+        # Conv2d(in_channels, out_channels, kernel_size, stride, padding)
         self.layer1 = nn.Sequential(
             nn.Conv2d(1, 16, kernel_size=5, stride=1, padding=2),
             nn.BatchNorm2d(16),
